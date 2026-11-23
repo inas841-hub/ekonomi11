@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Asesmen Sumatif Akhir Semester Ganjil – Ekonomi XI</title>
+<style>
+:root{--bg:#eef1fb;--card:#fff;--tx:#1d2140;--mut:#65708f;--bd:#dde2f2;--pri:#5b4bdb;--pri2:#06b6d4;--ok:#16a34a;--dbt:#f59e0b;--no:#e3e7f3;--bad:#dc2626;--sel:#ece9ff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1124;--card:#1a1e3b;--tx:#eef0ff;--mut:#a3accc;--bd:#2d3360;--no:#2a3060;--sel:#2b2766;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1124;--card:#1a1e3b;--tx:#eef0ff;--mut:#a3accc;--bd:#2d3360;--no:#2a3060;--sel:#2b2766;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--tx);min-height:100vh}
+body.ex{user-select:none;-webkit-user-select:none}
+.hide{display:none!important}
+.grad{background:linear-gradient(135deg,#5b4bdb,#06b6d4);color:#fff}
+.login{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:18px;background:linear-gradient(135deg,#5b4bdb 0%,#7c3aed 45%,#06b6d4 100%)}
+.box{background:var(--card);border-radius:22px;max-width:460px;width:100%;padding:26px;box-shadow:0 20px 50px rgba(20,10,80,.35)}
+.box h1{margin:0 0 4px;font-size:21px;line-height:1.25}.box .sub{color:var(--mut);font-size:14px;margin-bottom:16px}
+.logo{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;font-size:28px;margin-bottom:12px}
+label{display:block;font-size:13px;font-weight:600;margin:12px 0 5px}
+input,select{width:100%;padding:12px 13px;border-radius:12px;border:1.5px solid var(--bd);background:var(--card);color:var(--tx);font-size:15px}
+input:focus,select:focus{outline:none;border-color:var(--pri)}input[readonly]{background:var(--no)}
+.btn{border:0;border-radius:12px;padding:12px 18px;font-size:15px;font-weight:700;cursor:pointer;color:#fff;background:linear-gradient(135deg,#5b4bdb,#7c3aed)}
+.btn.full{width:100%;margin-top:18px;padding:14px}.btn.alt{background:var(--card);color:var(--tx);border:1.5px solid var(--bd)}
+.btn.dbt{background:linear-gradient(135deg,#f59e0b,#f97316)}.btn.dbt.on{background:#b45309}.btn:disabled{opacity:.45;cursor:not-allowed}
+.err{color:var(--bad);font-size:13px;margin-top:10px;min-height:16px}.rules{font-size:12.5px;color:var(--mut);margin-top:14px;line-height:1.5}
+header{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:calc(10px + env(safe-area-inset-top,0px)) 16px 10px;color:#fff;background:linear-gradient(135deg,#5b4bdb,#06b6d4)}
+header .who{font-size:13px;line-height:1.3;min-width:0}header .who b{display:block;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#timer{font-variant-numeric:tabular-nums;font-weight:800;font-size:20px;background:rgba(255,255,255,.2);padding:7px 14px;border-radius:12px;white-space:nowrap}
+#timer.low{background:#dc2626;animation:p 1s infinite}@keyframes p{50%{opacity:.6}}
+.main{max-width:1050px;margin:0 auto;padding:16px;display:grid;grid-template-columns:1fr 290px;gap:16px}
+@media(max-width:800px){.main{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:20px}
+.qno{display:inline-block;font-size:13px;font-weight:700;color:var(--pri);background:var(--sel);padding:5px 12px;border-radius:99px;margin-bottom:12px}
+#qtext p{margin:0 0 8px;line-height:1.6;font-size:16px}
+.dt{border-collapse:collapse;margin:6px 0 10px;font-size:15px}.dt td{padding:4px 14px 4px 0}
+.opt{display:flex;gap:12px;align-items:flex-start;width:100%;text-align:left;margin-top:10px;padding:12px 14px;border-radius:14px;border:1.5px solid var(--bd);background:var(--card);color:var(--tx);font-size:15px;line-height:1.5;cursor:pointer}
+.opt b{flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--no);font-size:13px}
+.opt:hover{border-color:var(--pri)}.opt.sel{border-color:var(--pri);background:var(--sel)}.opt.sel b{background:var(--pri);color:#fff}
+.actions{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}.actions .btn{flex:1;min-width:110px}
+.side h3{margin:0 0 10px;font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.n{aspect-ratio:1;border-radius:10px;border:2px solid transparent;font-weight:700;font-size:14px;cursor:pointer;background:var(--no);color:var(--tx)}
+.n.a{background:var(--ok);color:#fff}.n.d{background:var(--dbt);color:#fff}.n.c{border-color:var(--pri);box-shadow:0 0 0 3px var(--sel)}
+.leg{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:14px;font-size:12.5px;color:var(--mut)}.leg i{display:inline-block;width:12px;height:12px;border-radius:4px;margin-right:5px;vertical-align:-1px}
+.ov{position:fixed;inset:0;z-index:50;background:rgba(10,8,40,.8);display:flex;align-items:center;justify-content:center;padding:20px}
+.ov .box{text-align:center;max-width:420px}.ov h2{margin:8px 0}.ov p{color:var(--mut);line-height:1.55;margin:6px 0}
+.res{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:18px;background:linear-gradient(135deg,#5b4bdb,#7c3aed 45%,#06b6d4)}
+.score{font-size:78px;font-weight:900;line-height:1;margin:6px 0;background:linear-gradient(135deg,#5b4bdb,#06b6d4);-webkit-background-clip:text;background-clip:text;color:transparent}
+.info{text-align:left;margin-top:16px;border-top:1px solid var(--bd)}.info div{display:flex;justify-content:space-between;gap:12px;padding:10px 2px;border-bottom:1px solid var(--bd);font-size:15px}.info span{color:var(--mut)}.info b{text-align:right}
+</style></head><body>
+
+<div id="sLogin" class="login"><div class="box">
+<div class="logo grad">📈</div>
+<h1>Asesmen Sumatif Akhir Semester Ganjil</h1>
+<div class="sub">Ekonomi Kelas XI · Tahun Pelajaran 2026/2027</div>
+<label>Nama Siswa</label><input id="nama" placeholder="Nama lengkap" autocomplete="off">
+<label>Kelas</label><select id="kelas"><option value="">Pilih kelas</option><option>XI 3</option><option>XI 4</option><option>XI 5</option><option>XI 6</option><option>XI 7</option></select>
+<label>Nomor Peserta Didik</label><input id="nis" placeholder="Nomor peserta" inputmode="numeric" autocomplete="off">
+<label>Asal Sekolah</label><input id="sekolah" value="SMAN 1 Penengahan" readonly>
+<label>Token</label><input id="token" placeholder="Masukkan token dari pengawas" autocomplete="off">
+<div id="err" class="err"></div>
+<button class="btn full" id="start">Mulai Ujian</button>
+<div class="rules">Waktu 90 menit · 40 soal. Ujian berjalan dalam layar penuh. Berpindah tab, membuka jendela lain, atau keluar dari layar penuh mendapat <b>satu kali peringatan</b>; pelanggaran kedua mengakhiri ujian otomatis.</div>
+</div></div>
+
+<div id="sExam" class="hide">
+<header><div class="who"><b id="hNama"></b><span id="hInfo"></span></div><div id="timer">90:00</div></header>
+<div class="main">
+<div class="card"><span class="qno" id="qno"></span><div id="qtext"></div><div id="opts"></div>
+<div class="actions"><button class="btn alt" id="prev">← Sebelumnya</button><button class="btn dbt" id="doubt">Ragu-ragu</button><button class="btn" id="next">Selanjutnya →</button></div></div>
+<div class="card side"><h3>Navigasi Soal</h3><div class="grid" id="grid"></div>
+<div class="leg"><span><i style="background:var(--ok)"></i>Dijawab</span><span><i style="background:var(--dbt)"></i>Ragu-ragu</span><span><i style="background:var(--no)"></i>Belum dijawab</span></div>
+<button class="btn full" id="fin" style="background:linear-gradient(135deg,#16a34a,#0d9488)">Selesai Ujian</button></div>
+</div></div>
+
+<div id="sRes" class="res hide"><div class="box" style="text-align:center">
+<div class="logo grad" style="margin:0 auto 10px">🎓</div><h1>Ujian Selesai</h1><div class="sub" id="rNote">Terima kasih telah mengerjakan dengan jujur.</div>
+<div style="font-size:13px;color:var(--mut)">NILAI AKHIR</div><div class="score" id="rScore"></div>
+<div class="info"><div><span>Nama</span><b id="rNama"></b></div><div><span>Kelas</span><b id="rKelas"></b></div><div><span>Asal Sekolah</span><b id="rSek"></b></div></div>
+</div></div>
+
+<div id="ov" class="ov hide"><div class="box"><div style="font-size:44px" id="ovI">⚠️</div><h2 id="ovT"></h2><p id="ovP"></p><button class="btn full" id="ovB">Kembali ke Ujian</button></div></div>
+<div id="cf" class="ov hide"><div class="box"><h2>Akhiri ujian?</h2><p id="cfP"></p><div class="actions"><button class="btn alt" id="cfN">Lanjut mengerjakan</button><button class="btn" id="cfY">Ya, selesai</button></div></div></div>
+
+<script>
+const Q=[{"s": "<p>Perhatikan data berikut:</p><table class=\"dt\"><tr><td>GNP</td><td>2.000</td><td>Penyusutan</td><td>150</td></tr><tr><td>Pajak tidak langsung</td><td>100</td><td>Transfer</td><td>8</td></tr><tr><td>Pajak langsung</td><td>120</td><td>Laba ditahan</td><td>60</td></tr><tr><td>Iuran</td><td>20</td></tr></table><p>Berdasarkan data tersebut, hitung Disposable Income!</p>", "o": ["1.590", "1.670", "1.750", "1.850", "1.610"]}, {"s": "<p>Negara A memiliki PDB per kapita Rp80 juta dengan Gini Ratio 0,45, Negara B PDB per kapita Rp50 juta dengan Gini 0,25. Evaluasi kesejahteraan yang paling tepat adalah...</p>", "o": ["A pasti lebih sejahtera karena PDB per kapita lebih tinggi", "Gini tidak relevan", "B bisa lebih merata dan kesejahteraan kelompok bawah lebih baik meski rata-rata lebih rendah, karena distribusi lebih merata", "A dan B sama", "B lebih miskin mutlak"]}, {"s": "<p>Pendapatan nasional dengan pendekatan pendapatan menjumlahkan sewa, upah, bunga, laba. Jika laba perusahaan naik tajam tetapi upah stagnan, implikasi distribusi pendapatan adalah...</p>", "o": ["Pertumbuhan inklusif", "Pengangguran nol", "Inflasi nol", "Tidak ada implikasi", "Ketimpangan fungsional membesar, pemilik modal menikmati pertumbuhan lebih besar"]}, {"s": "<p>Komponen PDB menurut pengeluaran: C=800, I=300, G=400, X=500, M=350. Jika pemerintah menaikkan G sebesar 100 yang dibiayai utang luar negeri dan M naik 50 karena impor barang modal, dampak PDB baru adalah...</p>", "o": ["Naik menjadi 1.700", "Tetap 1.650", "Naik menjadi 1.750", "Turun menjadi 1.600", "Naik menjadi 1.800"]}, {"s": "<p>Diketahui:</p><table class=\"dt\"><tr><td>NNP</td><td>3.000</td></tr><tr><td>Pajak tidak langsung</td><td>200</td></tr><tr><td>Personal Income</td><td>2.600</td></tr></table><p>Besarnya pajak langsung + laba ditahan + iuran asuransi + transfer payment (net) yang mempengaruhi transisi NNI ke PI adalah 200.</p><p>Maka NNI adalah...</p>", "o": ["3.200", "2.800", "2.600", "3.000", "2.400"]}, {"s": "<p>Perhatikan data berikut:</p><table class=\"dt\"><tr><td>GNP</td><td>2.000</td><td>Penyusutan</td><td>150</td></tr><tr><td>Pajak tidak langsung</td><td>100</td><td>Transfer</td><td>8</td></tr><tr><td>Pajak langsung</td><td>120</td><td>Laba ditahan</td><td>60</td></tr><tr><td>Iuran</td><td>20</td></tr></table><p>Berdasarkan data tersebut, hitung Disposable Income!</p>", "o": ["1.590", "1.670", "1.750", "1.850", "1.610"]}, {"s": "<p>Jika pemerintah memberikan BLT Rp600.000 kepada masyarakat miskin, dalam perhitungan pendapatan nasional dengan pendekatan pengeluaran, BLT tersebut...</p>", "o": ["Langsung masuk sebagai G", "Masuk sebagai I", "Masuk sebagai X", "Tidak langsung masuk sebagai G, baru masuk sebagai C saat dibelanjakan masyarakat", "Mengurangi PDB"]}, {"s": "<p>PDB Indonesia tumbuh 5% tetapi jumlah penduduk tumbuh 6%. Maka PDB per kapita...</p>", "o": ["Turun sekitar 1%", "Naik 5%", "Tetap", "Naik 11%", "Turun 6%"]}, {"s": "<p>Inflasi tinggi menyebabkan nilai riil pendapatan nasional turun meski nominal naik. Strategi pemerintah yang paling tepat untuk menjaga daya beli tanpa memicu inflasi lebih lanjut adalah...</p>", "o": ["Mencetak uang sebanyak-banyaknya", "Meningkatkan produktivitas dan menjaga pasokan (supply side) + bantuan tepat sasaran", "Menurunkan suku bunga drastis", "Menutup impor", "Menaikkan pajak 100%"]}, {"s": "<p>Pendekatan produksi menghitung nilai tambah (value added) bukan nilai akhir saja. Jika perusahaan tepung menjual tepung Rp10.000 ke perusahaan roti yang menjual roti Rp20.000, PDB yang dicatat adalah...</p>", "o": ["Rp20.000", "Rp30.000", "Rp10.000", "Rp15.000", "Rp40.000"]}, {"s": "<p>Diketahui data (dalam triliun):</p><table class=\"dt\"><tr><td>Upah</td><td>1.200</td><td>Sewa</td><td>300</td></tr><tr><td>Bunga</td><td>200</td><td>Laba</td><td>800</td></tr><tr><td>Pajak tidak langsung</td><td>100</td><td>Penyusutan</td><td>150</td></tr></table><p>Maka PDB pendekatan pendapatan adalah...</p>", "o": ["2.650", "2.500", "2.750", "2.600", "2.400"]}, {"s": "<p>Jika pemerintah menaikkan dana pendidikan vokasi, dalam jangka panjang dampaknya terhadap pendapatan nasional adalah...</p>", "o": ["Hanya menaikkan G sesaat", "Menurunkan PDB", "Meningkatkan kualitas SDM, produktivitas, dan PDB potensial jangka panjang", "Tidak berpengaruh", "Menaikkan pengangguran"]}, {"s": "<p>Perhitungan pendapatan nasional yang memasukkan ekonomi informal (pedagang kaki lima tidak tercatat) akan...</p>", "o": ["Membuat PDB tercatat lebih tinggi", "Tidak ada efek", "Membuat PDB nol", "Membuat PDB tercatat lebih rendah dari sebenarnya (underestimate)", "Membuat inflasi nol"]}, {"s": "<p>Negara X memiliki GNP lebih besar dari GDP. Hal ini berarti...</p>", "o": ["Pendapatan neto faktor dari luar negeri positif (WNI di luar negeri lebih besar)", "Pendapatan WNA di dalam negeri lebih besar dari pendapatan WNI di luar negeri", "Negara X tidak punya WNI di luar negeri", "Negara X mengalami defisit", "Negara X tidak melakukan perdagangan"]}, {"s": "<p>Seorang lulusan SMK tidak bekerja karena menunggu lowongan yang sesuai jurusannya sambil mengikuti kursus. Ia termasuk pengangguran...</p>", "o": ["Struktural", "Siklis", "Friksional", "Musiman", "Teknologi"]}, {"s": "<p>Pabrik tekstil mengganti 100 buruh dengan mesin otomatis. Pengangguran yang muncul adalah...</p>", "o": ["Friksional", "Musiman", "Siklis", "Struktural / Teknologi", "Sukarela"]}, {"s": "<p>Petani di Jambi hanya bekerja saat musim panen sawit, di luar musim ia menganggur. Ini termasuk pengangguran...</p>", "o": ["Musiman", "Struktural", "Friksional", "Siklis", "Terbuka"]}, {"s": "<p>Seseorang bekerja 15 jam/minggu sebagai ojek online sambil mencari kerja penuh, padahal ia ingin bekerja 40 jam. Ia dikategorikan sebagai...</p>", "o": ["Bekerja penuh", "Bukan angkatan kerja", "Setengah pengangguran (underemployment)", "Pengangguran terbuka", "Bukan penduduk usia kerja"]}, {"s": "<p>Ibu rumah tangga yang tidak bekerja dan tidak mencari kerja termasuk...</p>", "o": ["Angkatan kerja", "Pengangguran terbuka", "Setengah pengangguran", "Bukan angkatan kerja", "Bekerja"]}, {"s": "<p>PHK sepihak tanpa pesangon oleh perusahaan yang masih untung. Dari sudut pandang UU Ketenagakerjaan, tindakan ini...</p>", "o": ["Dibolehkan karena hak perusahaan", "Pekerja tidak berhak apa-apa", "Perusahaan hanya wajib memberi surat", "Melanggar, pekerja berhak atas pesangon, penghargaan masa kerja, dan penggantian hak", "Pekerja wajib menerima"]}, {"s": "<p>Seorang pekerja di-PHK kemudian membuka usaha kuliner dan mempekerjakan 3 orang. Fenomena ini menunjukkan...</p>", "o": ["Pengangguran tidak dapat diatasi", "PHK meningkatkan PDB secara langsung", "Pekerja tersebut menjadi bukan angkatan kerja", "Pemerintah gagal total", "Kewirausahaan sebagai katup pengaman (shock absorber) ketenagakerjaan dan penciptaan lapangan kerja baru"]}, {"s": "<p>Peningkatan kemampuan perekonomian suatu negara dalam menghasilkan barang dan jasa dalam jangka panjang disebut ....</p>", "o": ["pembangunan ekonomi", "pertumbuhan ekonomi", "pemerataan pendapatan", "stabilisasi ekonomi", "industrialisasi"]}, {"s": "<p>Indikator yang paling umum digunakan untuk mengukur pertumbuhan ekonomi suatu negara adalah ....</p>", "o": ["Indeks Pembangunan Manusia", "Indeks Harga Konsumen", "Indeks Gini", "Produk Domestik Bruto (PDB) riil", "tingkat suku bunga"]}, {"s": "<p>Berikut ini yang termasuk faktor non-ekonomi yang memengaruhi pertumbuhan ekonomi adalah ....</p>", "o": ["akumulasi modal", "kemajuan teknologi", "kekayaan sumber daya alam", "jumlah tenaga kerja", "sistem sosial, budaya, dan stabilitas politik"]}, {"s": "<p>Perbedaan pokok antara pertumbuhan ekonomi dan pembangunan ekonomi adalah ....</p>", "o": ["pertumbuhan ekonomi mencakup perubahan struktur ekonomi, sedangkan pembangunan ekonomi hanya mengukur kenaikan output", "pertumbuhan ekonomi diukur dengan IPM, sedangkan pembangunan ekonomi diukur dengan PDB", "pertumbuhan ekonomi bersifat jangka pendek, sedangkan pembangunan ekonomi bersifat jangka panjang saja", "pertumbuhan ekonomi menekankan aspek kuantitatif, sedangkan pembangunan ekonomi mencakup aspek kualitatif, struktural, dan kesejahteraan masyarakat", "pertumbuhan ekonomi dan pembangunan ekonomi memiliki arti yang sama"]}, {"s": "<p>Menurut W.W. Rostow, tahap ketika terjadi pertumbuhan pesat pada sektor-sektor utama, investasi meningkat tajam, dan industri mulai berkembang luas disebut tahap ....</p>", "o": ["masyarakat tradisional", "prasyarat lepas landas", "menuju kedewasaan", "konsumsi massa tinggi", "lepas landas (take off)"]}, {"s": "<p>Teori yang menyatakan bahwa pertumbuhan ekonomi ditentukan oleh besarnya tabungan dan investasi (pembentukan modal) adalah teori ....</p>", "o": ["Harrod-Domar", "Schumpeter", "Lewis", "Malthus", "Keynes"]}, {"s": "<p>Menurut Joseph Schumpeter, faktor utama pendorong pertumbuhan ekonomi adalah ....</p>", "o": ["peningkatan jumlah penduduk", "kekayaan sumber daya alam", "inovasi yang dilakukan oleh para wirausahawan", "bantuan luar negeri", "kebijakan proteksi perdagangan"]}, {"s": "<p>Indeks Gini digunakan untuk mengukur ketimpangan distribusi pendapatan. Jika nilai Indeks Gini suatu negara mendekati 0, artinya ....</p>", "o": ["ketimpangan pendapatan sangat tinggi", "distribusi pendapatan semakin merata", "seluruh pendapatan dikuasai satu golongan", "pertumbuhan ekonomi negatif", "tingkat inflasi rendah"]}, {"s": "<p>PDB suatu negara pada tahun 2026 sebesar Rp15.000 triliun dengan jumlah penduduk 300 juta jiwa. PDB per kapita negara tersebut adalah ....</p>", "o": ["Rp5 juta", "Rp25 juta", "Rp50 juta", "Rp75 juta", "Rp500 juta"]}, {"s": "<p>Indeks Harga Konsumen (IHK) adalah indeks yang mengukur ....</p>", "o": ["perubahan harga rata-rata barang dan jasa yang dikonsumsi rumah tangga", "perubahan harga barang modal yang dibeli perusahaan", "perubahan harga barang ekspor dan impor", "besarnya pendapatan nasional suatu negara", "perubahan jumlah uang yang beredar"]}, {"s": "<p>Total harga sekelompok barang pada tahun dasar adalah Rp200.000, sedangkan pada tahun berjalan menjadi Rp230.000. IHK pada tahun berjalan adalah ....</p>", "o": ["87", "115", "130", "200", "230"]}, {"s": "<p>Inflasi adalah ....</p>", "o": ["kenaikan harga satu jenis barang dalam waktu singkat", "penurunan harga barang dan jasa secara umum", "kenaikan harga barang dan jasa secara umum dan terus-menerus dalam periode tertentu", "kenaikan nilai tukar mata uang terhadap mata uang asing", "peningkatan jumlah produksi barang dan jasa"]}, {"s": "<p>Jika tingkat inflasi suatu negara mencapai 45% per tahun, inflasi tersebut tergolong ....</p>", "o": ["inflasi berat", "inflasi sedang", "inflasi ringan", "hiperinflasi", "deflasi"]}, {"s": "<p>Menjelang hari raya, permintaan masyarakat terhadap bahan pokok meningkat tajam melebihi jumlah barang yang tersedia sehingga harga naik. Jenis inflasi tersebut adalah ....</p>", "o": ["inflasi tarikan biaya (cost push inflation)", "inflasi campuran", "inflasi impor (imported inflation)", "inflasi terbuka", "inflasi tarikan permintaan (demand pull inflation)"]}, {"s": "<p>Kenaikan harga BBM dan upah buruh menyebabkan biaya produksi naik sehingga harga barang meningkat. Inflasi ini disebabkan oleh ....</p>", "o": ["peningkatan konsumsi masyarakat", "kenaikan biaya produksi (cost push inflation)", "bertambahnya jumlah uang beredar akibat kredit", "kenaikan ekspor", "turunnya suku bunga"]}, {"s": "<p>Melemahnya nilai tukar rupiah menyebabkan harga bahan baku impor naik sehingga harga barang di dalam negeri ikut naik. Inflasi tersebut disebut ....</p>", "o": ["inflasi inti", "inflasi tertutup", "inflasi ringan", "inflasi impor (imported inflation)", "inflasi permintaan"]}, {"s": "<p>Pihak yang cenderung diuntungkan ketika terjadi inflasi adalah ....</p>", "o": ["pensiunan dengan uang pensiun tetap", "kreditur yang memberi pinjaman dengan bunga tetap", "penabung dengan bunga tabungan rendah", "buruh dengan upah tetap", "pemilik aset riil seperti tanah yang harganya naik lebih cepat dari inflasi"]}, {"s": "<p>Untuk menekan inflasi, Bank Indonesia menaikkan suku bunga acuan. Tujuan kebijakan tersebut adalah ....</p>", "o": ["meningkatkan jumlah uang beredar", "mendorong masyarakat meningkatkan konsumsi", "mengurangi jumlah uang beredar karena masyarakat terdorong menabung", "menurunkan pajak penghasilan", "meningkatkan belanja pemerintah"]}, {"s": "<p>Kebijakan fiskal yang dapat ditempuh pemerintah untuk mengatasi inflasi adalah ....</p>", "o": ["menurunkan tarif pajak dan menambah belanja pemerintah", "menurunkan suku bunga acuan", "menambah subsidi secara besar-besaran", "menaikkan pajak dan mengurangi pengeluaran pemerintah", "menurunkan cadangan wajib minimum bank"]}];const K=atob("QUNFQUJBREFCQUNDREFDREFDRERFQkRFREVBQ0JDQUJDQUVCREVDRA==");
+const TOKEN="ekonomi11",DUR=90*60,SK="ujian_eko11_";
+const $=id=>document.getElementById(id);let S=null,lock=false,fsOn=false,tm=null,W0=0,H0=0;
+const sv=()=>{try{localStorage.setItem(SK+S.id,JSON.stringify(S))}catch(e){}};
+const ld=id=>{try{return JSON.parse(localStorage.getItem(SK+id))}catch(e){return null}};
+const show=n=>{["sLogin","sExam","sRes"].forEach(x=>$(x).classList.toggle("hide",x!==n));document.body.classList.toggle("ex",n==="sExam")};
+const fs=()=>{try{const e=document.documentElement;if(e.requestFullscreen&&!document.fullscreenElement)e.requestFullscreen().catch(()=>{})}catch(e){}};
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+$("start").onclick=()=>{
+ const nama=$("nama").value.trim(),kelas=$("kelas").value,nis=$("nis").value.trim(),tk=$("token").value.trim().toLowerCase();
+ if(!nama||!kelas||!nis)return $("err").textContent="Lengkapi nama, kelas, dan nomor peserta didik.";
+ if(tk!==TOKEN)return $("err").textContent="Token salah. Tanyakan kepada pengawas.";
+ const id=kelas.replace(" ","")+"_"+nis;let st=ld(id);
+ if(!st)st={id,nama,kelas,nis,sekolah:"SMAN 1 Penengahan",order:shuffle(Q.map((_,i)=>i)),ans:{},dbt:{},cur:0,viol:0,done:false,endAt:Date.now()+DUR*1000,note:""};
+ S=st;sv();
+ if(S.done)return result();
+ begin(!!ld(id)&&st.endAt<Date.now()+DUR*1000-5000);
+};
+function begin(resume){
+ show("sExam");$("hNama").textContent=S.nama;$("hInfo").textContent=S.kelas+" · "+S.sekolah+" · No. "+S.nis;
+ render();tick();clearInterval(tm);tm=setInterval(tick,1000);
+ if(resume){lock=true;ov("🔄","Lanjutkan Ujian","Ujian Anda masih berjalan. Waktu tetap berjalan sejak sebelumnya.",()=>{lock=false;fs();base()})}
+ else{fs();base()}
+}
+function base(){setTimeout(()=>{W0=innerWidth;H0=innerHeight},700)}
+function tick(){
+ const r=Math.ceil((S.endAt-Date.now())/1000);if(r<=0){$("timer").textContent="00:00";return finish("Waktu habis, jawaban dikumpulkan otomatis.")}
+ $("timer").textContent=String(Math.floor(r/60)).padStart(2,"0")+":"+String(r%60).padStart(2,"0");$("timer").classList.toggle("low",r<=300);
+}
+function render(){
+ const i=S.cur,qi=S.order[i],q=Q[qi];
+ $("qno").textContent="Soal "+(i+1)+" dari "+Q.length;$("qtext").innerHTML=q.s;
+ $("opts").innerHTML=q.o.map((t,j)=>`<button class="opt ${S.ans[qi]===j?"sel":""}" data-j="${j}"><b>${"ABCDE"[j]}</b><span>${t}</span></button>`).join("");
+ document.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{S.ans[qi]=+b.dataset.j;sv();render()});
+ $("prev").disabled=i===0;$("next").disabled=i===Q.length-1;
+ $("doubt").textContent=S.dbt[qi]?"Batal Ragu":"Ragu-ragu";$("doubt").classList.toggle("on",!!S.dbt[qi]);
+ $("grid").innerHTML=S.order.map((o,k)=>`<button class="n ${S.dbt[o]?"d":S.ans[o]!==undefined?"a":""} ${k===i?"c":""}" data-k="${k}">${k+1}</button>`).join("");
+ document.querySelectorAll(".n").forEach(b=>b.onclick=()=>{S.cur=+b.dataset.k;sv();render();scrollTo(0,0)});
+}
+$("prev").onclick=()=>{S.cur--;sv();render()};$("next").onclick=()=>{S.cur++;sv();render()};
+$("doubt").onclick=()=>{const q=S.order[S.cur];S.dbt[q]?delete S.dbt[q]:S.dbt[q]=true;sv();render()};
+$("fin").onclick=()=>{
+ const un=S.order.filter(o=>S.ans[o]===undefined).length,db=Object.keys(S.dbt).length;
+ $("cfP").textContent=(un?un+" soal belum dijawab. ":"Semua soal sudah dijawab. ")+(db?db+" soal masih ragu-ragu. ":"")+"Setelah selesai, jawaban tidak dapat diubah.";$("cf").classList.remove("hide");
+};
+$("cfN").onclick=()=>$("cf").classList.add("hide");$("cfY").onclick=()=>{$("cf").classList.add("hide");finish("")};
+function ov(i,t,p,cb){$("ovI").textContent=i;$("ovT").textContent=t;$("ovP").textContent=p;$("ov").classList.remove("hide");$("ovB").onclick=()=>{$("ov").classList.add("hide");cb()}}
+function violation(why){
+ if(!S||S.done||lock||$("sExam").classList.contains("hide"))return;
+ lock=true;S.viol++;sv();
+ if(S.viol>=2)return finish("Ujian dihentikan otomatis karena pelanggaran kedua ("+why+").");
+ ov("⚠️","Peringatan Kecurangan!","Terdeteksi: "+why+". Ini adalah peringatan satu-satunya. Jika terulang, ujian Anda diakhiri otomatis dan nilai langsung dihitung.",()=>{fs();setTimeout(()=>{lock=false;base()},800)});
+}
+document.addEventListener("visibilitychange",()=>{if(document.hidden)violation("berpindah tab atau aplikasi")});
+window.addEventListener("blur",()=>violation("meninggalkan jendela ujian"));
+document.addEventListener("fullscreenchange",()=>{if(document.fullscreenElement)fsOn=true;else if(fsOn){fsOn=false;violation("keluar dari layar penuh")}});
+window.addEventListener("resize",()=>{if(S&&!S.done&&W0&&matchMedia("(pointer:fine)").matches&&(innerWidth<W0*.75||innerHeight<H0*.7))violation("mengubah ukuran atau membagi layar")});
+document.addEventListener("contextmenu",e=>e.preventDefault());
+["copy","cut","paste","dragstart"].forEach(v=>document.addEventListener(v,e=>e.preventDefault()));
+document.addEventListener("keydown",e=>{const k=e.key.toLowerCase();
+ if(k==="f12"||k==="printscreen"||((e.ctrlKey||e.metaKey)&&(["c","v","x","u","s","p","a"].includes(k)||(e.shiftKey&&["i","j","c"].includes(k))))){e.preventDefault();if(k==="printscreen")try{navigator.clipboard.writeText("")}catch(x){}}});
+window.addEventListener("beforeunload",e=>{if(S&&!S.done&&!$("sExam").classList.contains("hide")){e.preventDefault();e.returnValue=""}});
+function finish(note){
+ if(S.done)return;S.done=true;S.note=note;let c=0;
+ S.order.forEach(o=>{if(S.ans[o]!==undefined&&"ABCDE"[S.ans[o]]===K[o])c++});
+ S.score=Math.round(c/Q.length*1000)/10;sv();clearInterval(tm);
+ ["ov","cf"].forEach(x=>$(x).classList.add("hide"));
+ try{if(document.fullscreenElement)document.exitFullscreen()}catch(e){}
+ result();
+}
+function result(){
+ show("sRes");$("rScore").textContent=S.score.toLocaleString("id-ID");$("rNama").textContent=S.nama;$("rKelas").textContent=S.kelas;$("rSek").textContent=S.sekolah;
+ if(S.note)$("rNote").textContent=S.note;scrollTo(0,0);
+}
+</script></body></html>
